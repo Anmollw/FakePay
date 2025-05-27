@@ -6,7 +6,7 @@ import { InputBox } from "../components/InputBox"
 import { SubHeading } from "../components/SubHeading"
 import axios from "axios";
 import { useNavigate } from "react-router-dom"
-const backendurl = process.env.API_URL;
+const backendurl = import.meta.env.VITE_API_URL
 
 export const Signup = () => {
     const [firstName,setFirstName] = useState("");

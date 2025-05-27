@@ -4,7 +4,7 @@ import { Balance } from "../components/Balance"
 import { Users } from "../components/Users"
 import { useEffect } from "react"
 import axios from "axios"
-const backendurl = process.env.API_URL;
+const backendurl = import.meta.env.VITE_API_URL
 
 export const Dashboard = () =>{
     const [balance,setBalance] = useState(0);

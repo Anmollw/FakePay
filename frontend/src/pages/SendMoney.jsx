@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom"
 import axios from "axios";
 import { useState } from "react";
-const backendurl = process.env.API_URL;
+const backendurl = import.meta.env.VITE_API_URL
 export const SendMoney = () => {
     const [searchParams] = useSearchParams();
     const id = searchParams.get("id");
