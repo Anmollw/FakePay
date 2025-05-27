@@ -1,0 +1,4 @@
+node_modules
+mongodbcofig.js
+jwtconfig.js
+.env
