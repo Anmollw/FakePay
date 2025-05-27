@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom"
 import axios from "axios";
 import { useState } from "react";
+const backendurl = process.env.API_URL;
 export const SendMoney = () => {
     const [searchParams] = useSearchParams();
     const id = searchParams.get("id");
@@ -40,7 +41,7 @@ export const SendMoney = () => {
                     />
                     </div>
                     <button onClick={async()=>{
-                        await axios.post("http://localhost:3000/api/v1/account/transfer",{
+                        await axios.post(`${backendurl}/api/v1/account/transfer`,{
                             to : id,
                             amount
                         },{
