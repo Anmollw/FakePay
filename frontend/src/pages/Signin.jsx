@@ -29,8 +29,8 @@ export const Signin = () => {
           <Button onClick={async()=>{
             try{
               const response = await axios.post(`${backendurl}/api/v1/user/signin`,{
-                username,
-                password,
+                username : username,
+                password : password,
               });
               localStorage.setItem('token',response.data.token)
               navigate('/dashboard')
