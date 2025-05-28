@@ -23,7 +23,7 @@ export const Signin = () => {
           setUsername(e.target.value);
         }} placeholder="anmol@gmail.com" label={"Email"} />
         <InputBox OnChange={(e)=>{
-          setUsername(e.target.value);
+          setPassword(e.target.value);
         }} placeholder="1234567" label={"Password"} />
         <div className="pt-4">
           <Button onClick={async()=>{
