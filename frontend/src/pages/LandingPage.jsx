@@ -5,7 +5,7 @@ export const LandingPage = ()=>{
     return <div className="min-h-screen bg-gradient-to-br from-purple-900 via-black to-purple-800 font-sans">
         <nav className=" flex justify-between items-center px-6 py-4 bg-black/20 backdrop-blur-sm border-b border-purple-500/20">
            <div className="text-2xl font-bold text-white">
-               Paytm
+               FakePay
             </div>
 
             <div className='flex space-x-6'>
