@@ -3,7 +3,7 @@ import { BottomWarning } from "../components/BottomWarning"
 import { Button } from "../components/Button"
 import { Heading } from "../components/Heading"
 import { InputBox } from "../components/InputBox"
-import { SubHeading } from "../components/SubHeading"
+import { SubHeading, WhiteSubHeading } from "../components/SubHeading"
 import axios from "axios";
 import { useNavigate } from "react-router-dom"
 const backendurl = import.meta.env.VITE_API_URL
@@ -14,11 +14,11 @@ export const Signup = () => {
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
     const navigate= useNavigate();
-    return <div className="bg-slate-300 h-screen flex justify-center">
+    return <div className="bg-gradient-to-br from-black via-purple-900 to-black h-screen flex justify-center">
         <div className="flex flex-col justify-center">
-            <div className="rounded-lg bg-white w-80 text-center p-2 h-max px-4">
+            <div className="rounded-lg bg-black w-80 text-center p-2 h-max px-4 border-white border-1 text-white">
                 <Heading label={"Sign up"} />
-                <SubHeading label={"Enter your information to create an account"}/>
+                <WhiteSubHeading label={"Enter your information to create an account"}/>
                 <InputBox OnChange= {e =>{
                     setFirstName(e.target.value);
                 }}placeholder= "Jacob" label={"First Name"}/>
