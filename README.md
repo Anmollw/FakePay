@@ -1,9 +1,26 @@
-FakePayFakePay is a simulated payment application designed to demonstrate core functionalities of a digital wallet and transaction processing. It provides a platform to explore how payments can be made and managed in a simplified environment.✨ FeaturesWallet Management: Simulate adding and deducting funds from a user's wallet.Search for Users: Easily find other users within the application to facilitate transactions.Dynamic Balance Display: View real-time updates of your account balance.Send Money: Transfer funds between specific accounts, with immediate debiting and crediting.Transaction Processing: Experience the flow of making and receiving payments between accounts.User Interface: A simple and intuitive web-based interface for interaction.Planned Features:Transaction History: A feature to view a detailed record of all past transactions is planned for future development.🚀 Live DemoYou can try out the live application here: fakepay-psi.vercel.app🛠️ Technologies UsedJavaScript: The primary language for the application logic.HTML: For structuring the web pages.⚙️ Installation & SetupTo run FakePay locally, follow these steps:Clone the repository:git clone https://github.com/Anmollw/FakePay.git
-Navigate to the project directory:cd FakePay
-Install dependencies:This project likely uses npm or yarn. Install the dependencies by running:npm install
-# or
-yarn install
-Start the development server:npm start
-# or
-yarn start
-This will typically open the application in your default web browser at a local address (e.g., http://localhost:3000).💡 UsageOnce the application is running, you can interact with the FakePay interface to:Create accounts: Set up new user accounts within the simulation.Add funds: Simulate depositing money into a wallet.Search for users: Find specific users to transact with.Send money: Initiate transfers to other accounts.🤝 ContributingContributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.📄 License(The repository does not currently specify a license. You might want to add one, e.g., MIT, Apache 2.0, etc.)
+## FakePay
+
+**FakePay** is a simulated payment application designed to demonstrate core functionalities of a digital wallet and transaction processing. It provides a platform to explore how payments can be made and managed in a simplified environment.
+
+---
+
+## ✨ Features
+
+- **Wallet Management**: Simulate adding and deducting funds from a user's wallet.  
+- **Search for Users**: Easily find other users within the application to facilitate transactions.  
+- **Dynamic Balance Display**: View real-time updates of your account balance.  
+- **Send Money**: Transfer funds between specific accounts, with immediate debiting and crediting.  
+- **Transaction Processing**: Experience the flow of making and receiving payments between accounts.  
+- **User Interface**: A simple and intuitive web-based interface for interaction.  
+
+### Planned Features
+
+- **Transaction History**: A feature to view a detailed record of all past transactions is planned for future development.
+- **Payment Feature**: A feature to search for users using their email id and then allowing transactions.
+- **Transaction History**: A feature to hide and show account balance.
+
+---
+
+## 🚀 Live Demo
+
+You can try out the live application here: [https://fakepay-psi.vercel.app](https://fa)
