@@ -6,11 +6,10 @@
 
 ## ✨ Features
 
-- **Wallet Management**: Simulate adding and deducting funds from a user's wallet.  
+- **Balance automation**: Fake money will be added to the user's account after signup.  
 - **Search for Users**: Easily find other users within the application to facilitate transactions.  
 - **Dynamic Balance Display**: View real-time updates of your account balance.  
-- **Send Money**: Transfer funds between specific accounts, with immediate debiting and crediting.  
-- **Transaction Processing**: Experience the flow of making and receiving payments between accounts.  
+- **Send Money**: Transfer funds between specific accounts, with immediate debiting and crediting.   
 - **User Interface**: A simple and intuitive web-based interface for interaction.  
 
 ### Planned Features
@@ -35,33 +34,78 @@
 
 To run FakePay locally, follow these steps:
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Anmollw/FakePay.git
-   ```
+### 1. Clone the Repository
 
-2. **Navigate to the project directory:**
-   ```bash
-   cd FakePay
-   ```
+```bash
+git clone https://github.com/Anmollw/FakePay.git
+cd FakePay
+```
 
-3. **Install dependencies:**
+---
 
-   This project likely uses npm or yarn. Install the dependencies by running:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+### 2. Backend Setup
 
-4. **Start the development server:**
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
+Navigate to the `backend` directory:
 
-   This will typically open the application in your default web browser at a local address (e.g., `http://localhost:3000`).
+```bash
+cd backend
+```
+
+Install backend dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file and add your MongoDB connection string:
+
+```env
+mongodb_url=<your_mongodb_connection_string>
+```
+
+Start the backend server:
+
+```bash
+npm start
+```
+
+By default, this runs the Express API and connects to your MongoDB instance using the `mongodb_url` environment variable.
+
+---
+
+### 3. Frontend Setup
+
+Open a new terminal and navigate to the `frontend` directory:
+
+```bash
+cd ../frontend
+```
+
+Install frontend dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file and set the backend API URL:
+
+```env
+VITE_API_URL=http://localhost:5000
+```
+
+> Replace `http://localhost:5000` with the actual backend URL if it's different.
+
+Start the frontend development server:
+
+```bash
+npm run dev
+```
+
+This will launch the React frontend, which communicates with the backend using the `VITE_API_URL` environment variable.
+
+---
+
+Now both your frontend and backend should be running and connected properly!
 
 ---
 
@@ -69,8 +113,7 @@ To run FakePay locally, follow these steps:
 
 Once the application is running, you can interact with the FakePay interface to:
 
-- **Create accounts**: Set up new user accounts within the simulation.  
-- **Add funds**: Simulate depositing money into a wallet.  
+- **Create accounts**: Set up new user accounts within the simulation.   
 - **Search for users**: Find specific users to transact with.  
 - **Send money**: Initiate transfers to other accounts.  
 
