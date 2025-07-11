@@ -4,6 +4,7 @@ import { Signin } from "./pages/Signin"
 import { Dashboard } from "./pages/Dashboard"
 import { SendMoney } from "./pages/SendMoney"
 import { LandingPage } from "./pages/LandingPage"
+import { Analytics } from "@vercel/analytics/react"
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+      <Analytics />
         <Routes>
           <Route path="/" element = {<LandingPage />} />
           <Route path="/signup" element={ <Signup />} />
