@@ -6,6 +6,7 @@ import { InputBox } from "../components/InputBox"
 import { SubHeading, WhiteSubHeading } from "../components/SubHeading"
 import axios from "axios";
 import { useNavigate } from "react-router-dom"
+import { Loader } from "../components/Loader"
 const backendurl = import.meta.env.VITE_API_URL
 
 export const Signup = () => {
@@ -13,6 +14,7 @@ export const Signup = () => {
     const [lastName,setLastName] = useState("");
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
     const navigate= useNavigate();
     return <div className="bg-gradient-to-br from-black via-purple-900 to-black h-screen flex justify-center">
         <div className="flex flex-col justify-center">
@@ -33,7 +35,9 @@ export const Signup = () => {
                 }}placeholder= "1234567" label={"Password"}/>
                 <div className="pt-4">
                 <Button onClick={async()=>{
-                    const response = await axios.post(`${backendurl}/api/v1/user/signup`,{
+                    setLoading(true);
+                    try{
+                        const response = await axios.post(`${backendurl}/api/v1/user/signup`,{
                         username : username,
                         firstname : firstName,
                         lastname : lastName,
@@ -41,6 +45,13 @@ export const Signup = () => {
                     });
                     localStorage.setItem("token",response.data.token)
                     navigate('/dashboard')
+                    }
+                    catch(error){
+                        console.log("Signup error : ", error)
+                    }
+                    finally{
+                        setLoading(false);
+                    }
                 }} label={"Sign up"}/>
                 </div>
                 <BottomWarning label={"Already have an account?"} buttonText={"Sign in"} to={"/signin"}/>

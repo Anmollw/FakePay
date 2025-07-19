@@ -7,12 +7,14 @@ import { InputBox } from "../components/InputBox"
 import { SubHeading, WhiteSubHeading } from "../components/SubHeading"
 import { useState } from "react"
 import axios from "axios"
+import { Loader } from "../components/Loader"
 const backendurl = import.meta.env.VITE_API_URL
 
 
 export const Signin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate= useNavigate();
     return <div className="bg-gradient-to-br from-black via-purple-900 to-black h-screen flex justify-center">
     <div className="flex flex-col justify-center">
@@ -27,6 +29,7 @@ export const Signin = () => {
         }} placeholder="1234567" label={"Password"} />
         <div className="pt-4">
           <Button onClick={async()=>{
+            setLoading(true)
             try{
               const response = await axios.post(`${backendurl}/api/v1/user/signin`,{
                 username : username,
@@ -36,11 +39,15 @@ export const Signin = () => {
               navigate('/dashboard')
 
             }catch(error){
-
+              console.log("Login error : " , error)
+            }
+            finally{
+              setLoading(false)
             }
           }} label={"Login"} />
         </div>
         <BottomWarning label={"Don't have an account?"} buttonText={"Sign up"} to={"/signup"} />
+        {loading && <Loader />}
       </div>
     </div>
   </div>
