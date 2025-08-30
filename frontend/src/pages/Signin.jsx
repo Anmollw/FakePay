@@ -35,11 +35,19 @@ export const Signin = () => {
                 username : username,
                 password : password,
               });
-              localStorage.setItem('token',response.data.token)
-              navigate('/dashboard')
 
-            }catch(error){
-              console.log("Login error : " , error)
+              if(response.data.token){
+                localStorage.setItem('token',response.data.token)
+              navigate('/dashboard')
+              } else {
+                alert('User does not exist or credentials are incorrect.');
+              }
+            } catch(error){
+              if (error.response && error.response.status === 411) {
+                alert('Incorrect inputs. Please check your email and password.');
+              } else {
+                alert('An error occurred during login. Please try again.');
+              }
             }
             finally{
               setLoading(false)

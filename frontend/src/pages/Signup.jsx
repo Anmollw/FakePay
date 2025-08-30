@@ -52,10 +52,10 @@ export const Signup = () => {
                     finally{
                         setLoading(false);
                     }
-                    {loading && <Loader/>}
                 }} label={"Sign up"}/>
                 </div>
                 <BottomWarning label={"Already have an account?"} buttonText={"Sign in"} to={"/signin"}/>
+                {loading && <Loader/>}
             </div>
         </div>
     </div>
