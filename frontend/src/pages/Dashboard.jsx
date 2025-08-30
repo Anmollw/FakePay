@@ -28,9 +28,9 @@ export const Dashboard = () =>{
     },[]);
 
 
-    return <div>
+    return <div className="min-h-screen bg-gradient-to-br from-purple-600 via-black to-purple-600 font-sans text-white">
         <Appbar />
-        <div className="m-8">
+        <div className="m-8 p-6 bg-black/20 backdrop-blur-sm rounded-xl border border-purple-500/20">
             <Balance value = {balance} />
             <Users/>
 
