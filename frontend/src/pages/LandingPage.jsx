@@ -9,10 +9,14 @@ export const LandingPage = ()=>{
             </div>
 
             <div className='flex space-x-6'>
-                <button className='text-gray-300 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-purple-800/30 font-semibold'>
+                <button onClick={async()=>{
+                    window.location.href = "https://github.com/Anmollw/FakePay";
+                }}className='text-gray-300 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-purple-800/30 font-semibold'>
                     About
                 </button>
-                <button className='text-gray-300 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-purple-800/30 font-semibold'>
+                <button onClick= {async()=>{
+                    window.location.href = 'https://x.com/anmollwadhwa';
+                }}className='text-gray-300 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-purple-800/30 font-semibold'>
                     Contact
                 </button>
                 <button onClick = {async()=>{
